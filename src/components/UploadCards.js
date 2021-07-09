@@ -45,13 +45,14 @@ export default function UploadCards(props) {
     }
     let location
 
-    if (props.location.state === undefined) {
+    if (props.location.category === undefined) {
         location = ''
     } else {
-        location = props.location.state.category
+        location = props.location.category
     }
-
-    let recentPosts = data ? (data.filter(item => item.category === location).map(item =>
+    console.log(data)
+    console.log(location)
+    let recentPosts = data ? (data.filter(post => post.category == location).map(item =>
         <Grid item md={2} sm={4} xs={6} key={item.postId}>
             <Card style={{ textAlign: 'center' }}>
                 <CardContent>

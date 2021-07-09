@@ -52,11 +52,11 @@ export default function Uploader(props) {
                 console.log('success')
                 setLoading(false)
                 props.handleClose()
-                window.location.reload();
+                // window.location.reload();
 
             })
             .catch(err => {
-                setErrors(err.response.data)
+                setErrors(err.res.data)
                 setLoading(false)
             })
     }

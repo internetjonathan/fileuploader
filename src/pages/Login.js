@@ -40,7 +40,7 @@ export default function Login() {
                 window.location.href = '/';
             })
             .catch(err => {
-                setErrors(err.response.data)
+                setErrors(err.res.data)
                 setLoading(false)
             });
     }

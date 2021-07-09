@@ -152,7 +152,7 @@ export default function PersistentDrawerLeft(props) {
                 </div>
                 <Divider />
                 <List>
-                    {(props.user === 'tony@fabrictent.com' || props.user === 'eric@fabrictent.com') && <Modal />}
+                    {(props.user === 'tony@fabrictent.com' || props.user === 'eric@fabrictent.com'|| props.user === 'user8@gmail.com') && <Modal />}
 
                     <ListItem button >
                         <ListItemIcon><FolderIcon /></ListItemIcon>
