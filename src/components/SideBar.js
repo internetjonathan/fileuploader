@@ -3,7 +3,6 @@ import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom'
 import logo from '../fabric-logo.png'
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -88,6 +87,7 @@ export default function PersistentDrawerLeft(props) {
     const classes = useStyles();
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
+    
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -106,7 +106,7 @@ export default function PersistentDrawerLeft(props) {
         window.location.reload();
     }
 
-    console.log(props.user)
+    console.log(props)
 
 
     return (

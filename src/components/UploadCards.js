@@ -26,8 +26,7 @@ export default function UploadCards(props) {
         };
         fetchData();
     }, []);
-    axios.defaults.headers.delete['Authorization'] = localStorage.getItem('FBtoken')
-    axios.defaults.headers.post['Authorization'] = localStorage.getItem('FBtoken')
+    
 
 
     const deletePost = (postId) => {
@@ -72,7 +71,7 @@ export default function UploadCards(props) {
                 </CardContent>
                 <CardActions style={{ justifyContent: 'center' }}>
                     <Button>
-                        <a href={`mailto:?subject=${item.title}&body=${item.imageUrl}`}><EmailIcon /></a>
+                        <a href={`mailto:?subject=${item.title}&body=<${item.imageUrl}>`}><EmailIcon /></a>
                     </Button>
                     <Button>
                         <a target="_blank" rel='noreferrer' href={item.imageUrl} download><GetAppIcon /></a>

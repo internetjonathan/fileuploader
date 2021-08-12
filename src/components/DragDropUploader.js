@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-import { Typography } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -37,7 +35,6 @@ export default function DragDropUploader(props) {
 
         }
     })
-    // console.log(files[0].name)
     const handleChange = (e) => {
 
         const { name, value } = e.target
@@ -104,7 +101,7 @@ export default function DragDropUploader(props) {
                     onChange={handleChange}
                 >
                     <MenuItem value={'priceLists/wholesale'}>Price Lists/Wholesale</MenuItem>
-                    <MenuItem value={'priceLists/contractor'}>Price Lists/Contractor</MenuItem>
+                    <MenuItem value={'priceLists/contract'}>Price Lists/Contract</MenuItem>
                     <MenuItem value={'priceLists/manufacturer'}>Price Lists/Manufacturer</MenuItem>
                     <MenuItem value={'catalogs/european'}>Catalogs/European</MenuItem>
                     <MenuItem value={'catalogs/durarods'}>Catalogs/Durarods</MenuItem>
